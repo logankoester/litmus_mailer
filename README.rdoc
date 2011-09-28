@@ -15,6 +15,7 @@ Now you have no excuse for not knowing what your emails look like.
 In your Gemfile, add
 
     group :development do
+      gem 'litmus', :git => 'git://github.com/logankoester/litmus.git'
       gem 'litmus_mailer'
     end
 
