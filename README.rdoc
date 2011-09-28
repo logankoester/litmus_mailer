@@ -1,6 +1,34 @@
-= litmus_mailer
+= Litmus Mailer
 
-Description goes here.
+Litmus Mailer adds an ActionMailer observer to update your Litmus tests
+each time an email is delivered from development.
+
+Now you have no excuse for not knowing what your emails look like.
+
+== Requirements
+
+* Ruby 1.9.2+
+* Rails 3.0+
+
+== Installation
+
+In your Gemfile, add
+
+    group :development do
+      gem 'litmus_mailer'
+    end
+
+Now create a file at `app/initializers/litmus_mailer.rb`
+
+    if Rails.env == 'development'
+      LitmusMailer::Config.subdomain = 'your_litmus_subdomain'
+      LitmusMailer::Config.username = 'your_listmus_username'
+      LitmusMailer::Config.password = 'your_listmus_password'
+      LitmusMailer::Config.test_name_prefix = 'MyApplication-'
+    end
+
+You're done! A new Litmus test will be created for every action of every
+mailer, every time you deliver an email from development.
 
 == Contributing to litmus_mailer
  
