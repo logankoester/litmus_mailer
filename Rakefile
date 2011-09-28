@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "litmus_mailer"
   gem.homepage = "http://github.com/logankoester/litmus_mailer"
   gem.license = "MIT"
-  gem.summary = %Q{Litmus email previews as an ActionMailer delivery method}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Litmus Mailer adds an ActionMailer observer to update your Litmus tests each time an email is delivered from development.}
+  gem.description = gem.summary
   gem.email = "logan@logankoester.com"
   gem.authors = ["Logan Koester"]
   # dependencies defined in Gemfile
