@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{litmus_mailer}
-  s.version = "0.0.0"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Logan Koester}]
-  s.date = %q{2011-09-27}
+  s.date = %q{2011-09-28}
   s.description = %q{TODO: longer description of your gem}
   s.email = %q{logan@logankoester.com}
   s.extra_rdoc_files = [
@@ -19,12 +19,17 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     ".rspec",
+    ".rvmrc",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
     "VERSION",
     "lib/litmus_mailer.rb",
+    "lib/litmus_mailer/mail_observer.rb",
+    "lib/litmus_mailer/settings.rb",
+    "litmus_mailer.gemspec",
     "spec/litmus_mailer_spec.rb",
     "spec/spec_helper.rb"
   ]
@@ -39,6 +44,7 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<litmus>, [">= 0"])
+      s.add_runtime_dependency(%q<actionmailer>, [">= 0"])
       s.add_development_dependency(%q<rspec>, ["~> 2.3.0"])
       s.add_development_dependency(%q<yard>, ["~> 0.6.0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
@@ -46,6 +52,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<rcov>, [">= 0"])
     else
       s.add_dependency(%q<litmus>, [">= 0"])
+      s.add_dependency(%q<actionmailer>, [">= 0"])
       s.add_dependency(%q<rspec>, ["~> 2.3.0"])
       s.add_dependency(%q<yard>, ["~> 0.6.0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
@@ -54,6 +61,7 @@ Gem::Specification.new do |s|
     end
   else
     s.add_dependency(%q<litmus>, [">= 0"])
+    s.add_dependency(%q<actionmailer>, [">= 0"])
     s.add_dependency(%q<rspec>, ["~> 2.3.0"])
     s.add_dependency(%q<yard>, ["~> 0.6.0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
