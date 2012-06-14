@@ -3,7 +3,7 @@ module LitmusMailer
     class << self
 
       def delivered_email(mail)
-        Litmus::Base.new( Config.subdomain, Config.username, Config.password)
+        Litmus::Base.new( Config.subdomain, Config.username, Config.password, Config.ssl )
 
         # We can't add new versions through the API, and smtp settings are
         # rarely useable in development environments. For now, let's just
