@@ -29,9 +29,7 @@ Gem::Specification.new do |s|
     "lib/litmus_mailer.rb",
     "lib/litmus_mailer/mail_observer.rb",
     "lib/litmus_mailer/settings.rb",
-    "litmus_mailer.gemspec",
-    "spec/litmus_mailer_spec.rb",
-    "spec/spec_helper.rb"
+    "litmus_mailer.gemspec"
   ]
   s.homepage = %q{http://github.com/logankoester/litmus_mailer}
   s.licenses = [%q{MIT}]
@@ -45,28 +43,21 @@ Gem::Specification.new do |s|
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<litmus>, [">= 0"])
       s.add_runtime_dependency(%q<actionmailer>, [">= 0"])
-      s.add_development_dependency(%q<rspec>, ["~> 2.3.0"])
       s.add_development_dependency(%q<yard>, ["~> 0.6.0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.6.4"])
-      s.add_development_dependency(%q<rcov>, [">= 0"])
     else
       s.add_dependency(%q<litmus>, [">= 0"])
       s.add_dependency(%q<actionmailer>, [">= 0"])
-      s.add_dependency(%q<rspec>, ["~> 2.3.0"])
       s.add_dependency(%q<yard>, ["~> 0.6.0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
-      s.add_dependency(%q<rcov>, [">= 0"])
     end
   else
     s.add_dependency(%q<litmus>, [">= 0"])
     s.add_dependency(%q<actionmailer>, [">= 0"])
-    s.add_dependency(%q<rspec>, ["~> 2.3.0"])
     s.add_dependency(%q<yard>, ["~> 0.6.0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
-    s.add_dependency(%q<rcov>, [">= 0"])
   end
 end
-
