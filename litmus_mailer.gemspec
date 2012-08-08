@@ -44,20 +44,20 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<litmus>, [">= 0"])
       s.add_runtime_dependency(%q<actionmailer>, [">= 0"])
       s.add_development_dependency(%q<yard>, ["~> 0.6.0"])
-      s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
+      s.add_development_dependency(%q<bundler>, ["~> 1.1.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.6.4"])
     else
       s.add_dependency(%q<litmus>, [">= 0"])
       s.add_dependency(%q<actionmailer>, [">= 0"])
       s.add_dependency(%q<yard>, ["~> 0.6.0"])
-      s.add_dependency(%q<bundler>, ["~> 1.0.0"])
+      s.add_dependency(%q<bundler>, ["~> 1.1.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
     end
   else
     s.add_dependency(%q<litmus>, [">= 0"])
     s.add_dependency(%q<actionmailer>, [">= 0"])
     s.add_dependency(%q<yard>, ["~> 0.6.0"])
-    s.add_dependency(%q<bundler>, ["~> 1.0.0"])
+    s.add_dependency(%q<bundler>, ["~> 1.1.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
   end
 end
