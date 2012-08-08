@@ -13,9 +13,11 @@ module LitmusMailer
           Rails.logger.debug "Deleting Litmus test #{existing_test['id']} (#{existing_test['name']})"
         end
 
+        body = (mail.parts.nil? || mail.parts.empty?) ? mail.body : mail.parts.last.body
+
         new_test = Litmus::EmailTest.create({
           :subject => mail.subject,
-          :body    => mail.parts.last.body # Note that only the last part is sent
+          :body    => body # Note that only the last part is sent
         }, mail.litmus_test)
 
         Rails.logger.debug "Created new Litmus test #{new_test['id']} (#{new_test['name']})"
